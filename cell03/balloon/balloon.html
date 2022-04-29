@@ -1,0 +1,98 @@
+<!DOCTYPE HTML> 
+<html> 
+<head> 
+	<title> 
+		Background
+	</title>
+	<style>
+		.container {
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		#balloon {
+			width: 200px;
+			border-radius: 50%;
+			height: 200px;
+			background-color:red;
+		}
+	</style>
+	<script>
+		let i = 1;
+
+		function change_size()
+		{
+			let elem = document.getElementById('balloon');
+			let size = elem.offsetHeight;
+
+			elem.style.height = size + 5 + "px";
+			elem.style.width = size + 5 + "px";
+			if (size > 420)
+			{
+				size = 200;
+				elem.style.height = size + "px";
+				elem.style.width = size + "px";
+				elem.style.backgroundColor = "Red";
+				i = 1;
+			}
+			if (i == 1)
+			{
+				elem.style.backgroundColor = "green";
+				i++;
+			}
+			else if (i == 2)
+			{
+				elem.style.backgroundColor = "blue";
+				i++;
+			}
+			else if (i == 3)
+			{
+				elem.style.backgroundColor = "red";
+				i = 1;
+			}
+		}
+
+		function enter_balloon()
+		{
+			let elem = document.getElementById('balloon');
+			let size = elem.offsetHeight;
+
+			elem.style.height = size - 5 + "px";
+			elem.style.width = size - 5 + "px";
+			if (size < 200)
+			{
+				elem.style.width = 200 + "px";
+				elem.style.height = 200 + "px";
+			}
+			if (i == 1)
+			{
+				elem.style.backgroundColor = "blue";
+				i = 3;
+			}
+			else if (i == 2)
+			{
+				elem.style.backgroundColor = "red";
+				i--;
+			}
+			else if (i == 3)
+			{
+				elem.style.backgroundColor = "green";
+				i--;
+			}
+		}
+	</script>
+</head> 
+
+<body style = "text-align:center;">
+	<div class="container">
+		<div id="balloon" onclick="change_size()" onmouseenter="enter_balloon()" onmouseleave="enter_balloon()">
+			
+		</div>
+	</div>
+</body> 
+</html>

@@ -1,0 +1,37 @@
+.name {
+	font-size: 36px;
+	font-family: Impact;
+	color: grey;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+    margin-right: auto;
+	height:20px;
+}
+
+
+#images{
+    text-align:center;
+}
+
+.button {
+	background-color: black;
+	color: white;
+	text-align: center;
+	border: none;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}

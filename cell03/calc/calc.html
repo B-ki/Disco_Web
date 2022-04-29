@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CALC</title>
+	<style>
+		
+		.container {
+			position: absolute;
+			display: inline-block;
+		}
+		
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		.dropbtn {
+			background-color: #f1f1f1;
+			color: black;
+			border: none;
+		}
+		
+		.dropdown-content {
+			display: none;
+			background-color: #f1f1f1;
+			position: absolute;
+			min-width: 100%;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		
+		.dropdown-content a:hover {background-color: #ddd;}
+		
+		.dropdown:hover .dropdown-content {display: block;}
+		
+	</style>
+	<script>
+		
+		function calculate() {
+			let num1 = parseFloat(document.getElementById('myNumber1').value)
+			let num2 = parseFloat(document.getElementById('myNumber2').value)
+			let op = document.getElementById('op').value;
+			let result;
+			if (num1 < 0 || num2 < 0) {
+				alert("Error :(");
+				return;
+			}
+			if ((op == "/" || op == "%") && num2 == 0)
+				alert("It’s over 9000!");
+			else if (op == "+")
+				result = num1 + num2;
+			else if (op == "-")
+				result = num1 - num2;
+			else if (op == "*")
+				result = num1 * num2;
+			else if (op == "/")
+				result = num1 / num2;
+			else if (op == "%")
+				result = num1 % num2;
+			document.getElementById('show_result').value = result;
+				alert(result);
+			console.log(result);
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td class="left_box">
+				<th>
+					<input type="number" id="myNumber1" min="0">
+				</th>
+			</td>
+			<th>
+				<select id="op">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</th>
+				<td class="right_box">
+					<input type="number" id="myNumber2" min="0">
+				</td>
+				<td class="result">
+					<input type="submit" value="Submit" onClick="calculate()">
+				</td>
+			</tr>
+		</table>
+		<p>The Result is : <br>
+			<input type=""text" id="show_result">
+		</p>
+	</body>
+	</html>
