@@ -1,0 +1,55 @@
+html, body {
+    width:100%;
+    margin:0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    background: red;
+    top: 0;
+    left: 0;
+    position:relative;
+    padding: 40px 50px;
+    width:100%;
+}
+
+.button {
+    padding: 10px 20px;
+    background: rgb(203, 203, 203);
+    border-radius: 10%;
+}
+
+.todo {
+    width:100%;
+    text-align: center;
+    position: absolute; 
+}
+
+ul {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+
+    list-style-type: none;
+    padding: 5px 5px 5px 5px;
+}
+
+ul li:nth-child(odd) {
+    background: rgb(225, 225, 225);
+  }
+
+ul li:hover {
+    background: lightgray;
+}
+
+.task {
+    display: block;
+}

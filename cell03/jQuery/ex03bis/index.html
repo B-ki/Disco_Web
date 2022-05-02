@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head><title>TO-DO</title>
+	<link href="todo.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="index.js"></script>
+	</head>
+	<body onload="checkCookie()">
+		<div id="myDIV" class="header">
+			<h2>To-do List</h2>
+			<input type="text" id="myInput" placeholder="Title...">
+			<span onclick="newElement()" class="addBtn">New</span>
+		</div>
+		<ul id="myUL">
+		</ul>
+	</body>
+</html>
